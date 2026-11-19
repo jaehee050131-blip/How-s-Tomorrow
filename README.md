@@ -1,26 +1,40 @@
-# Weather Dragon
+# 내일 어때용? (How's Tomorrow?)
 
-A weather-based message sharing web application that combines weather forecasts, personalized messages, and dragon characters.
+A web application that lets you send tomorrow's weather to someone special through a link, delivered by four cute dragon brothers.
 
 ## Purpose and Target Users
 
-This project helps users share creative weather-based messages with friends, family, and acquaintances.
+**Target users:** People who want to share tomorrow's weather with someone special,
+such as a partner, a crush, or a friend they want to get closer to.
+
+**Problem:** Sometimes you want to say, "It's going to rain tomorrow, don't forget your umbrella."
+But reaching out first can feel like a burden, and a weather app screenshot or a short text
+can seem low-effort and rarely starts a conversation.
+
+**Our solution:** Pick a city and create a link. When the other person opens it,
+one of four dragon brothers (sunny, cloudy, rainy, snowy) delivers tomorrow's weather,
+so you can show you care without the pressure.
 
 ## Main Features
 
-- Select a city in South Korea.
-- Write a personalized message.
-- Generate a shareable link.
-- Display tomorrow's weather, date, city, and temperature.
-- Display a dragon character based on the weather.
-- Keep the generated link valid until the target date.
+- Select a major city in South Korea (Seoul and the metropolitan cities).
+- Generate a shareable link that contains tomorrow's weather at the time the link is created.
+- Show the date, city, weather, and temperature when the recipient opens the link.
+- Show one of four dragon brothers based on the weather (sunny, cloudy, rainy, snowy).
+- Show an "expired link" page after the forecast date has passed.
+
+### Planned After the MVP
+
+- Write a personalized message to include in the link.
 
 ## Example Usage
 
-1. Select Seoul as the target city.
-2. Write a message such as "Have a wonderful day!"
-3. Generate and share the link.
-4. The recipient opens the link and sees the message, weather forecast, and corresponding dragon character.
+1. On November 20, select Seoul as the target city.
+2. Generate the link and share it through a messenger app.
+3. The recipient opens the link and sees the weather for Seoul on November 21:
+   the date, weather, temperature, and the matching dragon brother.
+4. If the recipient opens the link on November 22 or later,
+   an "expired link" page is shown.
 
 ## Tech Stack
 
@@ -71,8 +85,10 @@ Linux/macOS:
 ## Current Limitations
 
 - The project is currently in its initial development stage.
-- Weather API integration, message sharing, and character rendering are not yet implemented.
-- The planned MVP supports cities in South Korea only.
+- Weather API integration, link generation, and the dragon character page are not yet implemented.
+- The MVP supports only Seoul and the metropolitan cities in South Korea.
+- Personalized messages are not supported in the MVP.
+- Weather data is stored in the link itself, so someone could edit the link by hand to show incorrect weather.
 
 ## Contributing
 
