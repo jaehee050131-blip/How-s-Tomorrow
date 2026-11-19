@@ -58,7 +58,7 @@ Every student takes real responsibility for implementation and for review. Roles
 
 ## Using AI tools
 
-AI tools are allowed. You are responsible for the code and must be able to explain it. Check the output before opening a PR (run tests, read the code), and fill in the "AI-use disclosure" section of the PR template: what you delegated, how you checked it, and what you accepted, changed, or rejected.
+AI tools are allowed. You are responsible for the code and must be able to explain it. Check the output before opening a PR (run tests, read the code), and fill in the "AI Usage" section of the PR template: what you delegated, how you checked it, and what you accepted, changed, or rejected (write "None" if you did not use AI).
 
 ## Secrets
 
