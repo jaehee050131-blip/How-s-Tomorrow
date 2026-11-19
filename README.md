@@ -46,8 +46,8 @@ so you can show you care without the pressure.
 ## Setup
 
 ```bash
-git clone https://github.com/jaehee050131-blip/OSS-Project.git
-cd OSS-Project
+git clone https://github.com/jaehee050131-blip/How-s-Tomorrow.git
+cd How-s-Tomorrow
 ```
 
 JDK 21 is required.
