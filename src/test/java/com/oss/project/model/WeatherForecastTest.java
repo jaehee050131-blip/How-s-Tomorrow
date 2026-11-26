@@ -58,9 +58,21 @@ class WeatherForecastTest {
                         LocalDate.of(2026, 11, 26),
                         City.SEOUL,
                         WeatherCondition.SUNNY,
-                        5,
+                        15,
                         5
                 ));
     }
+    @Test
+    void equalTemperaturesAreValid() {
+        WeatherForecast forecast = new WeatherForecast(
+                LocalDate.of(2026, 11, 26),
+                City.BUSAN,
+                WeatherCondition.CLOUDY,
+                5,
+                5
+        );
 
+        assertEquals(5, forecast.minTemp());
+        assertEquals(5, forecast.maxTemp());
+    }
 }

@@ -48,13 +48,9 @@ class WeatherLinkTest {
     }
 
     @Test
-    void sameMinAndMaxIsInvalid() {
-        Map<String, String> values = validValues();
-        values.put("min", "5");
-        values.put("max", "5");
-
-        assertThrows(IllegalArgumentException.class,
-                () -> WeatherLink.read(values));
+    void roundTripSameMinAndMax() {
+        WeatherForecast forecast = new WeatherForecast(DATE, City.BUSAN, WeatherCondition.CLOUDY, 5, 5);
+        assertEquals(forecast, WeatherLink.read(valuesOf(WeatherLink.create(forecast))));
     }
 
     @Test

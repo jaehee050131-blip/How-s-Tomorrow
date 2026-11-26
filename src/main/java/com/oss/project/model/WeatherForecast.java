@@ -16,9 +16,9 @@ public record WeatherForecast(
         Objects.requireNonNull(city, "city is required");
         Objects.requireNonNull(condition, "condition is required");
 
-        if (minTemp >= maxTemp) {
+        if (minTemp > maxTemp) {
             throw new IllegalArgumentException(
-                    "Minimum temperature must be lower than maximum temperature"
+                    "Minimum temperature cannot exceed maximum temperature"
             );
         }
     }
