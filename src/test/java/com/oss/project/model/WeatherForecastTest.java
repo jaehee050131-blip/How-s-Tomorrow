@@ -58,8 +58,9 @@ class WeatherForecastTest {
                         LocalDate.of(2026, 11, 26),
                         City.SEOUL,
                         WeatherCondition.SUNNY,
-                        15,
+                        5,
                         5
                 ));
     }
+
 }
