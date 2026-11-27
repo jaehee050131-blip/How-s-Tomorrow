@@ -66,13 +66,8 @@ class WeatherForecastServiceTest {
                 withSuccess(json, MediaType.APPLICATION_JSON)
         );
 
-        WeatherForecast forecast = service.fetchTomorrow(
-                City.SEOUL,
-                code -> {
-                    assertEquals(2, code);
-                    return WeatherCondition.CLOUDY;
-                }
-        );
+        WeatherForecast forecast =
+                service.fetchTomorrow(City.SEOUL);
 
         assertEquals(expectedTomorrow, forecast.date());
         assertEquals(City.SEOUL, forecast.city());

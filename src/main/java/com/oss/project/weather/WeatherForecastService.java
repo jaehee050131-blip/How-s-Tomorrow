@@ -1,7 +1,6 @@
 package com.oss.project.weather;
 
 import com.oss.project.model.City;
-import com.oss.project.model.WeatherCondition;
 import com.oss.project.model.WeatherForecast;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +10,6 @@ import java.time.Clock;
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.Objects;
-import java.util.function.IntFunction;
 
 @Service
 public class WeatherForecastService {
@@ -35,12 +33,8 @@ public class WeatherForecastService {
         this.clock = Objects.requireNonNull(clock);
     }
 
-    public WeatherForecast fetchTomorrow(
-            City city,
-            IntFunction<WeatherCondition> weatherMapper
-    ) {
+    public WeatherForecast fetchTomorrow(City city) {
         Objects.requireNonNull(city, "City is required");
-        Objects.requireNonNull(weatherMapper, "Weather mapper is required");
 
         LocalDate tomorrow = LocalDate
                 .now(clock.withZone(KOREA_ZONE))
@@ -53,7 +47,7 @@ public class WeatherForecastService {
                 city,
                 response,
                 tomorrow,
-                weatherMapper
+                WeatherCodeMapper::toCondition
         );
     }
 }
